@@ -32,9 +32,9 @@ public class AppManager {
 
     public void init(Konfig konf) {
         open(konf.podopitnie);
-        $(By.name("user")).setValue(konf.userL); //вход в систему.
-        $(By.name("pass")).setValue(konf.userP);
-        $("#submit").click();
+        $(By.xpath("//input[@type='text']")).setValue(konf.userL); //вход в систему.
+        $(By.xpath("//input[@type='password']")).setValue(konf.userP);
+        $("div.v-button.v-widget.v-has-width").click();
     }
 
 
